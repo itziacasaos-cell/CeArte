@@ -27,17 +27,16 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand selection:text-slate-950">
 
-    <!-- NAVBAR FLOTANTE CON LOGOTIPO PROPORCIONADO EN CÍRCULO BLANCO AJUSTADO -->
+    <!-- NAVBAR FLOTANTE CON LOGOTIPO OFICIAL PROPORCIONADO -->
     <header class="sticky top-0 z-50 bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3.5">
-                <!-- Círculo blanco ajustado a la medida exacta con el logo maximizado -->
-                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white flex items-center justify-center p-0.5 shadow-md overflow-hidden border border-brand/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white flex items-center justify-center p-0.5 shadow-lg overflow-hidden border-2 border-brand/60 flex-shrink-0">
                     <img src="logo-cearte.jpg" alt="CeArte Logo" class="w-full h-full object-cover rounded-full scale-105">
                 </div>
                 <div>
-                    <span class="text-lg sm:text-xl font-extrabold tracking-tight text-white block leading-none"><b>CeArte</b></span>
-                    <span class="text-[9px] sm:text-[10px] uppercase tracking-widest text-brand font-semibold block mt-1">Centro de Educación en Arte</span>
+                    <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-white block leading-none"><b>CeArte</b></span>
+                    <span class="text-[10px] sm:text-xs uppercase tracking-widest text-brand font-semibold block mt-1">Centro de Educación en Arte</span>
                 </div>
             </div>
             <div class="flex items-center space-x-4">
@@ -49,7 +48,7 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION CON SLIDER AUTOMÁTICO (CADA 3 SEGUNDOS) -->
     <section class="relative overflow-hidden pt-12 pb-16 lg:pt-20 lg:pb-24">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-brand/10 via-slate-950/0 to-slate-950 pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -75,21 +74,38 @@
                         <span class="bg-slate-900 border border-slate-800 text-brand px-3 py-1 rounded-lg text-xs font-semibold">Bajo</span>
                     </div>
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-                        <!-- CTA PRINCIPAL DESTACADO (VERDE) -->
                         <a href="https://wa.me/525531056776?text=Hola,%20quiero%20agendar%20mi%20clase%20muestra%20gratis" target="_blank" class="w-full sm:w-auto bg-brand hover:bg-brand-dark text-slate-950 font-bold px-8 py-3.5 rounded-xl shadow-xl shadow-brand/25 text-center transition-all transform hover:-translate-y-1 text-sm flex items-center justify-center gap-2">
                             <span>Agendar mi clase muestra gratis 💬</span>
                         </a>
-                        <!-- CTA SECUNDARIO -->
                         <a href="#metodologias" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-semibold px-8 py-3.5 rounded-xl text-center transition-all text-sm">
                             Ver programas y precios
                         </a>
                     </div>
                 </div>
+
+                <!-- CONTENEDOR DEL SLIDER AUTOMÁTICO DE FOTOS -->
                 <div class="lg:col-span-5 relative">
-                    <div class="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900">
-                        <img src="image_a8a384.jpg" alt="Transformación y expresión en <b>CeArte</b>" class="w-full h-[350px] sm:h-[420px] object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6 p-4 bg-slate-900/90 backdrop-blur-md rounded-2xl border border-slate-800">
+                    <div class="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900 h-[350px] sm:h-[420px]">
+                        
+                        <!-- Imagen 1: Cantante -->
+                        <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-100">
+                            <img src="image_a8a384.jpg" alt="Canto y expresión en CeArte" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Imagen 2: Piano -->
+                        <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+                            <img src="d5964d53-1543-4151-92fa-887aad9129e5.jpg" alt="Teclado y Piano en CeArte" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Imagen 3: Guitarra -->
+                        <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+                            <img src="91f2bec0-39e2-43c0-9343-e419a48d365c.jpg" alt="Guitarra en CeArte" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Imagen 4: Batería -->
+                        <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+                            <img src="06f7dd36-38fb-4c6d-a2d0-b0ecb69ea971.jpg" alt="Batería en CeArte" class="w-full h-full object-cover">
+                        </div>
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-6 left-6 right-6 p-4 bg-slate-900/90 backdrop-blur-md rounded-2xl border border-slate-800 z-20">
                             <p class="text-white font-bold text-xs sm:text-sm">"De la duda inicial a sentir la verdadera libertad en el escenario."</p>
                             <span class="text-brand text-[10px] sm:text-xs font-semibold mt-1 block">— Comunidad <b>CeArte</b></span>
                         </div>
@@ -98,6 +114,18 @@
             </div>
         </div>
     </section>
+
+    <!-- SCRIPT PARA EL CAMBIO AUTOMÁTICO DE FOTOS CADA 3 SEGUNDOS -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        function nextSlide() {
+            slides[currentSlide].style.opacity = '0';
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].style.opacity = '1';
+        }
+        setInterval(nextSlide, 3000);
+    </script>
 
     <!-- SECCIÓN DE METODOLOGÍAS Y PRECIOS -->
     <section id="metodologias" class="py-16 sm:py-24 bg-slate-900/40 border-t border-b border-slate-800/80">
